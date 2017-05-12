@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>!TRIVIA!</title>
+    <!--jQuery library -->
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <!--custom css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- reset css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="container text-center">
+        <!--correct answer display -->
+    <div id="correctAnswer"></div>
+    <!-- wrong answer display -->
+    <div id="wrongAnswer"></div>
+        <div id="questionsArray">
+            <!-- first question and answers -->
+            <div class="question" id="question1">
+                <h1> How many players are on a starting soccer team? </h1>
+                <button value="correct"> 11 </button>
+                <button value="wrong"> 7 </button>
+                <button value="wrong"> 15 </button>
+                <button value="wrong"> 9 </button>
+            </div>
+            <!-- second question and answers -->
+            <div class="question" id="question2"> 
+                <h1>What is the most prestigious club soccer tournament in the world?</h1>
+                <button value="correct"> Champions League </button>
+                <button value="wrong"> Coppa del Nonno </button>
+                <button value="wrong"> FA Cup </button>
+                <button value="wrong"> Festivalbar </button>
+            </div>
+            <div class="question" id="question3">
+                <h1> Who won the latest edition fo the Fifa World Cup?</h1>            
+                <button value="correct"> Germany </button>
+                <button value="wrong"> Spain </button>
+                <button value="wrong"> Italy </button>
+                <button value="wrong"> Brazil </button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>

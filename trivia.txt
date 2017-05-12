@@ -1,0 +1,26 @@
+Trivia Game !!! (figure out theme)
+
+user is greeted with a start game screen. When user hits start, program loads the first question and timer starts.
+
+when user clicks on wrong answer display wrong answer screen/picture/animation/fx
+
+when user clicks on right answer display right answer screen/picture/animation/fx
+
+in both cases, load the next question after 5 seconds automatically using timers. 
+
+keep tally of correct and inccorrect answers on game over screen. Show this screen after all questions have been answered. 
+
+for loop that iterates through all questions. 
+	Put questions in 1 html element
+	var questionsAndAnswers getElementbyId('id of questions and answers html element')
+	for (i=0; i<questionAndAnswers.length;i++){
+		// do something 
+	}	
+
+VARIABLES NEEDED
+Store questions and answers inside of an object. 
+winCounter = 0
+lossCOunter = 0
+rightAnswers
+wrongAnswers
+
