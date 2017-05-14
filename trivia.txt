@@ -17,6 +17,7 @@ for loop that iterates through all questions.
 		// do something 
 	}	
 
+
 VARIABLES NEEDED
 Store questions and answers inside of an object. 
 winCounter = 0
