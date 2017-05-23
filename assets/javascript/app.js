@@ -12,6 +12,12 @@
     //variable to keep track of array index
     var questionCounter = 0;
 
+    var timeCounter = 30;
+    //variables to keep track of right and wrong answers
+    var rightAnswerCounter = 0;
+    var wrongAnswerCounter = 0;
+    var unansweredCounter = 0;
+
     //_______________FUNCTIONS_____________
     //_____________________________________
 
@@ -54,49 +60,33 @@ $(questionsArray[questionCounter- 1]).hide();
 console.log(questionsArray[questionCounter]);
 }
 
-/*     for (var i = 0; i < questionsArray.length; i++) {
-            hideInactiveQuestions();
-            //$('#questionsArray').empty();
-            $('.question').show(questionsArray[i]);
-*/
-            
-    
-/*
-    for (var i in questionsArray) {
-         $('questionsArray').each(questionsArray[i]);
-         console.log(questionsArray);
-
-         //show next question
-         $('#questionsArray').show(questionsArray[i]);
-        
-     }
-}*/
-
     //function that sets a timer for each question
     function gloabalTimer(){
+    timeCounter --;
 
     }
 
     //function that loads a correct answer notification
     function correctAnswerScreen() {
-        /*$('section').toggle();*/
-        //$('#questionsArray').hide();
-        $('#correctAnswer').html('<h1>correct</h1>');
+        $('#answerStatus').html('<h1>correct</h1>');
+            rightAnswerCounter ++;
            
     }
 
     //function that loads a wrong answer notification
     function wrongAnswerScreen() {
-        /*$('section').toggle();*/
-        //$('#questionsArray').hide();
-        $('#correctAnswer').html('<h1>wrong</h1>');      
-    }
-
-    //hides the answer screen after timer 
-    function answerTimer(){
-        $('#correctAnswer').hide();
+        $('#answerStatus').html('<h1>wrong</h1>');      
+            wrongAnswerCounter ++;
 
     }
+
+    function displayScores() {
+        if (questionCounter === 3){
+            $('#scoreTally').html('<h1> Wrong Answers: '+ wrongAnswerCounter + '</h1> <br>' + '<h1> Right Answers: '+ rightAnswerCounter + '</h1> <br>');
+     
+        }
+    }
+
     //_______________MAIN CODE_____________
     //_____________________________________
     startGame();
@@ -113,19 +103,13 @@ console.log(questionsArray[questionCounter]);
 
         if (this.value == 'correct') {
            correctAnswerScreen();
-           setTimeout(answerTimer, 3*1000);
-            clearTimeout();    
                 newQuestionLoader();
-            
+          
         } else if (this.value == 'wrong') {
-            /*alert('wrong was clicked');*/
-            wrongAnswerScreen();
-            setTimeout(answerTimer(), 3*1000);
-            clearTimeout();
+            wrongAnswerScreen();   
             newQuestionLoader();
-
         }
-
+        displayScores();
     });
 
  });
